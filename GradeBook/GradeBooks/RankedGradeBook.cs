@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
       var minimum_number_of_students = 5;
       if (Students.Count < minimum_number_of_students)
       {
-        throw InvalidOperationException($"Ranked-grading requires a minimum of {minimum_number_of_students} students to work");
+        throw new InvalidOperationException($"Ranked-grading requires a minimum of {minimum_number_of_students} students to work");
       }
       var threshold = (int)Math.Ceiling(Students.Count * 0.2);
       var grades = Students.OrderByDescending(x => x.AverageGrade).Select(e => e.AverageGrade).ToList();
