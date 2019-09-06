@@ -4,7 +4,7 @@ namespace GradeBook.GradeBooks
 {
   public class RankedGradeBook : BaseGradeBook
   {
-    public StandardGradeBook(string name) : base(name)
+    public RankedGradeBook(string name) : base(name)
     {
       _gradeBookType = GradeBookType.Ranked;
     }
